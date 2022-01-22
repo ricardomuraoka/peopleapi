@@ -1,4 +1,4 @@
-package one.dio.personapi.mapper;
+package one.dio.personapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
