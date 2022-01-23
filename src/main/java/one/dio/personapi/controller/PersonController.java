@@ -1,8 +1,8 @@
 package one.dio.personapi.controller;
 
+import lombok.AllArgsConstructor;
 import one.dio.personapi.dto.request.PersonDTO;
 import one.dio.personapi.dto.response.MessageResponseDTO;
-import one.dio.personapi.entity.Person;
 import one.dio.personapi.exception.PersonNotFoundException;
 import one.dio.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +15,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/people")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
     private PersonService personService;
-
-    @Autowired
-    public PersonController(PersonService personService) {
-        this.personService = personService;
-    }
-
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

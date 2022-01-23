@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import javax.persistence.FetchType;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -34,7 +35,8 @@ public class Person {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private LocalDate birthDate;
-    private List<Phone> phones;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    private List<Phone> phones = new ArrayList<>();
 }
