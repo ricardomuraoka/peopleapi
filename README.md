@@ -3,7 +3,8 @@ Sistema de gerenciamento de pessoas em API REST com Spring Boot
 
 - ✅ Realizado Deploy no Heroku e subido no Github.
 - ✅ Projeto finalizado conforme as aulas do Rodrigo Peleias
-- ❌ Realizado testes com postman para os métodos criados
+- ✅ Realizado testes do método Post com postman
+- ❌ Realizado testes Get, Delete, Put e Patch
 
 ##
 
